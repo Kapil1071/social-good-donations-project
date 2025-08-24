@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images/uploads"
+collections:
+  - name: "programs"
+    label: "Programs"
+    folder: "_data/programs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Supporters", name: "supporters", widget: "number"}
+      - {label: "Percentage Funded", name: "funded", widget: "number"}
+      - {label: "Goal Amount", name: "goal", widget: "number"}
+      - {label: "Current Amount", name: "current", widget: "number"}

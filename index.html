@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Good Initiative</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1>Together We Create Change</h1>
+            <p>Join our community-driven mission to create lasting positive impact.</p>
+            <a href="#donation-section" class="btn">Start Making Impact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="impact-section" class="container">
+            <h2>Where Your Impact Goes</h2>
+            <div id="impact-cards-container" class="impact-cards">
+                <!-- Impact cards will be loaded here from Netlify CMS -->
+            </div>
+        </section>
+
+        <section id="donation-section" class="container">
+            <h2>Make Your Impact Today</h2>
+            <div class="donation-box">
+                <div class="donation-amount">
+                    <button class="amount-btn" data-amount="25">$25</button>
+                    <button class="amount-btn" data-amount="50">$50</button>
+                    <button class="amount-btn" data-amount="100">$100</button>
+                    <input type="number" id="custom-amount" placeholder="Custom Amount">
+                </div>
+                <form id="donation-form">
+                    <input type="text" id="full-name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <textarea id="message" placeholder="Share why this cause matters to you..."></textarea>
+                    <button type="submit" id="donate-btn" class="btn">Donate</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Social Good Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2/dist/netlify-cms.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
