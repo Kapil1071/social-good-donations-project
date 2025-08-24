@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         impactCardsContainer.innerHTML = data.map(item => `
             <div class="card">
                 <h3>${item.title}</h3>
-                <p>${item.supporters} supporters • ${item.funded}% funded</p>
+                <p>₹${item.current.toLocaleString('en-IN')} of ₹${item.goal.toLocaleString('en-IN')}</p>
                 <progress value="${item.current}" max="${item.goal}"></progress>
                 <p>$${item.current.toLocaleString()} of $${item.goal.toLocaleString()}</p>
             </div>
