@@ -134,14 +134,17 @@ progress::-webkit-progress-value {
     margin: 40px auto;
 }
 
+/* --- THIS IS THE START OF THE EDITED CODE --- */
+
 .donation-amount {
     display: flex;
+    flex-wrap: wrap; /* CHANGED: Added this line to allow items to wrap */
     gap: 15px;
     margin-bottom: 25px;
 }
 
 .amount-btn {
-    flex: 1;
+    flex: 1 1 100px; /* CHANGED: Replaced 'flex: 1' for better responsiveness */
     padding: 15px;
     border: 1px solid var(--border-color);
     background: #fff;
@@ -149,6 +152,7 @@ progress::-webkit-progress-value {
     border-radius: 8px;
     font-size: 1.1rem;
     font-weight: bold;
+    text-align: center; /* CHANGED: Added to ensure text is centered */
     transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -158,12 +162,16 @@ progress::-webkit-progress-value {
 }
 
 #custom-amount {
-    flex: 1;
+    flex: 2 1 150px; /* CHANGED: Replaced 'flex: 1' for better responsiveness */
     padding: 15px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     font-size: 1.1rem;
+    min-width: 0; /* CHANGED: Added to prevent overflow on small screens */
 }
+
+/* --- THIS IS THE END OF THE EDITED CODE --- */
+
 
 #donation-form input,
 #donation-form textarea {
