@@ -75,15 +75,16 @@ h2 {
     color: #ffffff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
-
 .hero-section p {
     font-size: 1.3rem;
     margin-bottom: 30px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    /* Add a subtle shadow to the paragraph as well for consistency */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    
+    /* This is the crucial fix for the paragraph */
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Impact Section --- */
