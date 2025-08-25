@@ -8,26 +8,46 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: 'Community Food Programs', funded: 58, supporters: 89, goal: 15000, current: 8750 }
     ];
 
-    function renderImpactCards(data) {
+    // Replace your existing function with this one
+function renderImpactCards(data) {
+    if (impactCardsContainer) {
         impactCardsContainer.innerHTML = data.map(item => `
             <div class="card">
                 <h3>${item.title}</h3>
-                <p>₹${item.current.toLocaleString('en-IN')} of ₹${item.goal.toLocaleString('en-IN')}</p>
+                <p>${item.supporters} supporters • ${item.funded}% funded</p>
                 <progress value="${item.current}" max="${item.goal}"></progress>
-                <p>$${item.current.toLocaleString()} of $${item.goal.toLocaleString()}</p>
+                
+                <!-- THIS IS THE ONLY PRICE LINE WE NEED -->
+                <p>₹${item.current.toLocaleString('en-IN')} of ₹${item.goal.toLocaleString('en-IN')}</p>
+
             </div>
         `).join('');
     }
+}
 
     renderImpactCards(sampleData);
 
 
     // Razorpay Integration
-    const donateBtn = document.getElementById('donate-btn');
+    // --- Code to Add: Link amount buttons to the input field ---
+const amountButtons = document.querySelectorAll('.amount-btn');
+const customAmountInput = document.getElementById('custom-amount');
+
+amountButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const amount = button.getAttribute('data-amount');
+        customAmountInput.value = amount;
+    });
+});
+// --- End of Code to Add ---
+
+// This line should already be in your file
+const donateBtn = document.getElementById('donate-btn');
+   
 
     donateBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        const amount = document.getElementById('custom-amount').value || '50'; // Default to 50 if no amount is selected
+       const amount = customAmountInput.value;
         const options = {
             "key": "rzp_test_R97BJt5cOtiIX8",
             "amount": amount * 100, // Amount in the smallest currency unit
