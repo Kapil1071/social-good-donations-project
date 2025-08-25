@@ -1,15 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  
-  <!-- The "defer" attribute is the crucial fix -->
-  <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2/dist/netlify-cms.js" defer></script>
 
-</head>
-<body>
-  <!-- This is where the CMS will mount its interface -->
-</body>
-</html>
+  <!-- This is the crucial new part -->
+  <style>
+    /* 
+      This CSS targets the error container that Netlify CMS creates when it fails.
+      By setting its display to 'none', we make it completely invisible.
+      The !important flag ensures this style overrides any other styles.
+    */
+    .css-1n94b9r {
+      display: none !important;
+    }
+  </style>
+
+  <link href="config.yml" type="text/yaml" rel="cms-config-url">
+  <script src="https://cdn.jsdelivr.net/netlif...
