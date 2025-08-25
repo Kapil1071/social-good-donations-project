@@ -1,0 +1,16 @@
+{
+  "name": "social-good-donations-microsite",
+  "version": "1.0.0",
+  "description": "A donation microsite with AI-powered thank you emails.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "@sendgrid/mail": "^8.1.1"
+  }
+}
