@@ -4,8 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2/dist/netlify-cms.js"></script>
+  
+  <!-- The "defer" attribute is the crucial fix -->
+  <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2/dist/netlify-cms.js" defer></script>
+
 </head>
 <body>
+  <!-- This is where the CMS will mount its interface -->
 </body>
 </html>
