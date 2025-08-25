@@ -57,20 +57,23 @@ h2 {
 }
 
 /* --- Header & Hero Section --- */
+/* --- Header & Hero Section --- */
+/* --- Header & Hero Section --- */
 .hero-section {
-    /* !!! THIS IS THE MOST IMPORTANT PART FOR THE LOOK !!! */
-    /* Make sure you have an image at this path */
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../images/hero-background.jpg') no-repeat center center/cover;
-    color: white;
     text-align: center;
     padding: 150px 20px;
+    /* This color is inherited by the p tag */
+    color: #ffffff; 
 }
 
 .hero-section h1 {
-    font-size: 4rem;
+    font-size: 4.2rem; /* Slightly larger for more impact */
     font-weight: 700;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    /* This is the crucial fix: pure white color with a stronger shadow */
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .hero-section p {
@@ -79,6 +82,8 @@ h2 {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    /* Add a subtle shadow to the paragraph as well for consistency */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* --- Impact Section --- */
