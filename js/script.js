@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const options = {
-                "key": "rzp_test_R97BJt5cOtiIX8", // Make sure this is your Razorpay Key ID
+                "key": "rzp_test_RBHfRduqm6tqDV", // Make sure this is your Razorpay Key ID
                 "amount": amount * 100, // Amount in the smallest currency unit
                 "currency": "INR",
                 "name": "Social Good Initiative",
